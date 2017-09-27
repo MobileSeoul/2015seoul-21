@@ -1,0 +1,151 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#333333"
+    tools:context="com.sns.MainActivity" >
+
+    <RelativeLayout
+        android:id="@+id/topLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="#333333"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp" >
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="150dp"
+            android:layout_height="25dp"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/logo"
+            android:scaleType="centerInside" />
+
+        <EditText
+            android:id="@+id/editText"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@id/logo"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="60dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/edittext"
+            android:ems="20"
+            android:hint="@string/string_hint"
+            android:imeOptions="actionSearch"
+            android:lines="1"
+            android:scaleType="centerInside"
+            android:singleLine="true"
+            android:textColor="@color/color_black"
+            android:textCursorDrawable="@null" />
+
+        <Button
+            android:id="@+id/btnSearch"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@id/editText"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/button_search"
+            android:scaleType="centerCrop" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/necessaryLayoutTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/topLayout"
+        android:background="#FFFFFF"
+        android:layout_marginTop="15dp"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp" >
+
+        <TextView
+            android:id="@+id/textNecessaryLayoutTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:background="#FFFFFF"
+            android:textColor="#111111"
+            android:textSize="20dp"
+            android:gravity="center"
+            android:text="실제 마트에선 얼마일까요?" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/necessaryLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:background="#FFFFFF"
+        android:layout_below="@id/necessaryLayoutTitle" >
+
+        <com.sns.MarqueeTextView
+            android:id="@+id/necessaryText"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="120dp"
+            android:ellipsize="marquee"
+            android:gravity="center"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:singleLine="true"
+            android:textColor="@color/color_black"
+            android:textSize="14dp" />
+
+        <Button
+            android:id="@+id/btnMoreNecessaries"
+            android:layout_width="80dp"
+            android:layout_height="35dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:gravity="center"
+            android:background="#3AA9E0"
+            android:textSize="16dp"
+            android:textColor="#FFFFFF"
+            android:text="더보기" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/contentLayoutTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/necessaryLayout"
+        android:layout_marginBottom="10dp"
+        android:background="#FFFFFF"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp" >
+
+        <TextView
+            android:id="@+id/textContentLayoutTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:background="#FFFFFF"
+            android:textColor="#111111"
+            android:gravity="center"
+            android:textSize="20dp" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/contentLayoutTitle"
+        android:background="#333333" >
+
+        <LinearLayout
+            android:id="@+id/contentLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#FFFFFF" >
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

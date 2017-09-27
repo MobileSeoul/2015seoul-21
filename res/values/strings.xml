@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">서울시 농수산물</string>
+    <string name="string_search">농수산물 검색</string>
+    <string name="string_hint">예시) 배추</string>
+    <string name="action_settings">Settings</string>
+    <string name="string_spinner_district">지역구 선택</string>
+
+    <color name="color_background_footer">#CCCCCC</color>
+    <color name="color_background_top">#4682B3</color>
+    <color name="color_white">#FFFFFF</color>
+    <color name="color_black">#000000</color>
+    <color name="color_gainsboro">#DCDCDC</color>
+
+</resources>
